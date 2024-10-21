@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif; /* Font style for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+header {
+    background-color: #4a90e2; /* Header background color */
+    color: white; /* Text color in the header */
+    padding: 20px; /* Padding around the header content */
+    position: sticky; /* Keeps the header at the top of the page when scrolling */
+    top: 0; /* Positioning the sticky header */
+    z-index: 1000; /* Ensures the header is above other content */
+}
+
+nav {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+}
+
+nav h1 {
+    margin-right: 20px; /* Space between the title and the navigation links */
+}
+
+nav ul {
+    display: flex; /* Use flexbox for navigation items */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between navigation items */
+}
+
+nav ul li a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make links bold */
+}
+
+.edit {
+    display: flex; /* Use flexbox for icons */
+    color: white; /* Icon color */
+    align-items: center; /* Center icons vertically */
+}
+
+.edit i {
+    font-size: 30px; /* Size of the icons */
+    margin-left: 15px; /* Space between icons */
+}
+
+.edit i:hover {
+    color: black; /* Change icon color on hover */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+main {
+    flex: 1; /* Allow main to grow and fill available space */
+    display: flex; /* Use flexbox for centering content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 20px; /* Padding around main content */
+    background-image: url('Screenshot_1.png'); /* Background image */
+    background-size: cover; /* Cover the entire section with the image */
+    background-position: top; /* Position the image at the top */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.movin {
+    position: relative; /* Position relative for absolute child */
+    overflow: hidden; /* Hide overflow to keep text within bounds */
+    background-color: #f9f9f9; /* Background color */
+    color: #4a90e2; /* Text color */
+    white-space: nowrap; /* Prevent text from wrapping */
+    height: 50px; /* Height of the moving text */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center text vertically */
+}
+
+.movin p {
+    display: inline-block; /* Inline-block to apply animation */
+    animation: loopin 15s linear infinite; 
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.movin {
+    background-color: black;
+}
+@keyframes loopin { 
+    0% {
+        transform: translateX(100%); /* Start off-screen to the left */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the right */
+    }
+}
+.Product1 {
+    text-align: center;
+}
+.image-gallery {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-evenly; /* Space them evenly with less gap */
+    padding: 20px; /* Add padding */
+}
+
+.image-item {
+    position: relative; /* Position relative for overlaying images */
+    text-align: center; /* Center text under images */
+    max-width: 250px; /* Increase the max width for larger images */
+    margin: 0 10px; /* Smaller margin between items */
+}
+
+.image-item img {
+    width: 100%; /* Make the image responsive */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    border-radius: 8px; /* Optional: add some rounding to the corners */
+}
+
+.hover-image {
+    position: absolute; /* Position overlaying image */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Make it fill the container */
+    height: 150px; /* Set a fixed height for hover image */
+    object-fit: cover; /* Ensure the hover image covers the area */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.image-item:hover .hover-image {
+    opacity: 1; /* Show on hover */
+}
+
+.image-item:hover .main-image {
+    opacity: 0; /* Hide main image on hover */
+
+}
+
+.image-item:hover .initialtext {
+    text-decoration: underline;
+}
+
+.image-item p {
+    margin-top: 10px; /* Space between image and text */
+    font-size: 18px; /* Increase font size for the text */
+    color: #333; /* Text color */
+}
+
+.initialtext {
+    margin-top: 10px; /* Space between image and text */
+    font-size: 35px; /* Increase font size for the text */
+    color: #333; /* Text color */
+    text-decoration: none;
+}
+
+
+
+footer {
+    text-align: center; /* Center text in the footer */
+    padding: 20px; /* Padding around footer content */
+    background-color: #4a90e2; /* Footer background color */
+    color: white; /* Text color in the footer */
+}
+
+.centered-box {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 20px auto; /* Center the box */
+    max-width: 800px; /* Limit the width */
+    background-color: white; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    padding: 20px; /* Padding inside the box */
+}
+
+.box-item {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    margin: 15px 0; /* Space between box items */
+}
+
+.box-image {
+    width: auto; /* Set a fixed width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-right: 20px; /* Space between image and text */
+    margin-left: 20px;
+}
+
+.box-text {
+    flex: 1; /* Allow text to grow */
+    
+}
+
+.box-text h2 {
+    margin: 0 0 10px 0; /* Space below the title */
+    font-size: 24px; /* Title font size */
+}
+
+.box-text p {
+    margin: 0; /* Remove default margin */
+    color: #555; /* Text color for description */
+}
+
+.reviews {
+    text-align: center; /* Center the title */
+    margin: 40px 0; /* Space above and below */
+}
+
+.reviews h2 {
+    font-size: 28px; /* Title font size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.reviews-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Space boxes evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.review-box {
+
+    border: 1px; /* Light border */
+    border-radius: 0px; /* Rounded corners */
+    padding: 0px; /* Padding inside the box */
+    margin: 0px; /* Space between boxes */
+    width: 250px; /* Fixed width for the boxes */
+}
+
+/* .review-box p {
+    margin: 5px 0;
+    color: #333; */
+
