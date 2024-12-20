@@ -8,7 +8,7 @@ body {
 header {
     background-color: #4a90e2; /* Header background color */
     color: white; /* Text color in the header */
-    padding: 20px; /* Padding around the header content */
+    padding: 10px; /* Padding around the header content */
     position: sticky; /* Keeps the header at the top of the page when scrolling */
     top: 0; /* Positioning the sticky header */
     z-index: 1000; /* Ensures the header is above other content */
@@ -246,4 +246,3 @@ footer {
 /* .review-box p {
     margin: 5px 0;
     color: #333; */
-
